@@ -1,6 +1,6 @@
 const giphyAPIkey = "BR2DuOOkBFz9u2pzDHyKSRgQHfk8gzSQ";
 const giphyURL = "https://api.giphy.com/v1/gifs/translate?";
-const div = document.querySelector("body");
+const gifContainer = document.querySelector(".gif-container");
 
 export async function getGif(searchQuery) {
   try {
@@ -17,6 +17,6 @@ export async function getGif(searchQuery) {
     img.src = gifURL;
 
     //! Change this to the actual gif contatiner
-    // div.appendChild(img);
+    gifContainer.appendChild(img);
   } catch (error) {}
 }
