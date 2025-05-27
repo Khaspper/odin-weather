@@ -10,9 +10,10 @@ const weatherWeek = document.querySelector(".weather-week");
 
 weatherWeek.addEventListener("click", (event) => {
   selectWeatherDay(event.target.id);
+  getGif(event.target.id);
 });
 
 await getWeather("las vegas");
 printThisWeeksWeather();
 selectWeatherDay("day-1");
-// getGif("cats");
+getGif("day-1");

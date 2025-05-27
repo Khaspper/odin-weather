@@ -64,7 +64,7 @@ export function selectWeatherDay(selectedDay) {
   weatherTemperature.innerHTML = `${json.temp}&#176;`;
 }
 
-function getJsonForSelectedDay(selectedDay) {
+export function getJsonForSelectedDay(selectedDay) {
   const index = selectedDay.split("-")[1] - 1;
   return weeklyWeather[index];
 }
