@@ -31,5 +31,10 @@ img {
 /* CSS RESET BY DIGITAL OCEAN */
 
 body {
+  /*! Delete this later !*/
   background-color: black;
+  outline: auto red;
+  color: white;
+  /*! Delete this later !*/
+  height: 100vh;
 }
