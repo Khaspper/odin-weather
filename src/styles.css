@@ -81,10 +81,16 @@ body {
 
 .current-day-weather {
   font-size: 3rem;
-  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
+  width: 25rem;
+}
+
+.weather-icon {
+  width: 15rem;
 }
 
 .gif-container img {

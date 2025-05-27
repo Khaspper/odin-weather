@@ -61,7 +61,7 @@ export function selectWeatherDay(selectedDay) {
   const weatherDescription = document.querySelector(".weather-description");
   const weatherTemperature = document.querySelector(".weather-temperature");
   weatherDescription.textContent = json.conditions;
-  weatherTemperature.textContent = json.temp;
+  weatherTemperature.innerHTML = `${json.temp}&#176;`;
 }
 
 function getJsonForSelectedDay(selectedDay) {
