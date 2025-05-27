@@ -7,7 +7,7 @@ const gifContainer = document.querySelector(".gif-container");
 export async function getGif(selectedDay) {
   try {
     const weatherJson = getJsonForSelectedDay(selectedDay);
-    const searchQuery = `${weatherJson.conditions} weather`;
+    const searchQuery = `${weatherJson.conditions}`;
     console.log(searchQuery);
     const response = await fetch(
       `${giphyURL}api_key=${giphyAPIkey}&s=${searchQuery}`
