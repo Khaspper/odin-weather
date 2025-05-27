@@ -33,7 +33,6 @@ img {
 body {
   /*! Delete this later !*/
   background-color: black;
-  outline: auto red;
   color: white;
   /*! Delete this later !*/
 
@@ -80,9 +79,9 @@ body {
 }
 
 .current-day-weather {
-  /* outline: auto yellow; */
-}
-
-.gif-container {
-  /* outline: auto green; */
+  font-size: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
