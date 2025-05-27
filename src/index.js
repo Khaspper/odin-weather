@@ -1,6 +1,7 @@
 import "./styles.css";
-import { getWeather } from "./weatherAPI";
+import { getWeather, printThisWeeksWeather } from "./weatherAPI";
 import { getGif } from "./gifAPI";
 
-getWeather("las vegas");
+await getWeather("las vegas");
+printThisWeeksWeather();
 // getGif("cats");

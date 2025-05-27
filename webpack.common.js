@@ -1,5 +1,8 @@
 const path = require("path");
+import webpack from "webpack";
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+const supportedLocales = ["en-US", "de", "pl", "it"];
 
 module.exports = {
   entry: "./src/index.js",
@@ -12,7 +15,13 @@ module.exports = {
   devServer: {
     watchFiles: ["./src/index.html"],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
+  plugins: [
+    new HtmlWebpackPlugin({ template: "./src/index.html" }),
+    new webpack.ContextReplacementPlugin(
+      /date-fns[\/\\]locale$/,
+      new RegExp(`(${supportedLocales.join("|")})\\.js$`)
+    ),
+  ],
   module: {
     rules: [
       {

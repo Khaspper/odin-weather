@@ -65,6 +65,7 @@ body {
   font-size: 3rem;
   flex-wrap: wrap;
   margin: 2rem;
+  text-align: center;
   /* outline: auto blue; */
 }
 
