@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import { format, parseISO } from "date-fns";
 
 const weatherAPIkey = "83RVYNF7EDJEKWLXMA3UNATQZ";
 const weatherThisWeek = document.querySelectorAll(".weather-day");
@@ -46,12 +46,28 @@ export function printThisWeeksWeather() {
   let i = 0;
   for (const day of weatherThisWeek) {
     const rawDate = weeklyWeather[i].datetime;
-    const formatted = format(new Date(rawDate), "MMMM do");
+    //? This makes sure that it is specified to the users timezone
+    const localDate = parseISO(rawDate);
+    const formatted = format(localDate, "MMMM do");
     day.textContent = formatted;
     i++;
   }
 }
 
+//TODO: Dynamic import???
+//TODO: Change Image Icon for .weather-icon
+export function selectWeatherDay(selectedDay) {
+  const json = getJsonForSelectedDay(selectedDay);
+  const weatherDescription = document.querySelector(".weather-description");
+  const weatherTemperature = document.querySelector(".weather-temperature");
+  weatherDescription.textContent = json.conditions;
+  weatherTemperature.textContent = json.temp;
+}
+
+function getJsonForSelectedDay(selectedDay) {
+  const index = selectedDay.split("-")[1] - 1;
+  return weeklyWeather[index];
+}
 // This is what it looks like
 // {
 //   conditions: "Clear",
