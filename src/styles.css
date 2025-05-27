@@ -36,21 +36,53 @@ body {
   outline: auto red;
   color: white;
   /*! Delete this later !*/
+
   height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
+    "selected"
+    "other-weather";
 }
 
 .selected-weather {
-  outline: auto orange;
-}
-
-.current-day-weather {
-  outline: auto yellow;
-}
-
-.gif-container {
-  outline: auto green;
+  grid-area: selected;
+  display: flex;
+  gap: 20vw;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  /* outline: auto orange; */
 }
 
 .weather-week {
-  outline: auto blue;
+  grid-area: other-weather;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  font-size: 3rem;
+  flex-wrap: wrap;
+  margin: 2rem;
+  /* outline: auto blue; */
+}
+
+.weather-day {
+  flex: 0 1 10rem;
+  outline: auto red;
+  height: 10rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-day-weather {
+  /* outline: auto yellow; */
+}
+
+.gif-container {
+  /* outline: auto green; */
 }
