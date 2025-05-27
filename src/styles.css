@@ -38,3 +38,19 @@ body {
   /*! Delete this later !*/
   height: 100vh;
 }
+
+.selected-weather {
+  outline: auto orange;
+}
+
+.current-day-weather {
+  outline: auto yellow;
+}
+
+.gif-container {
+  outline: auto green;
+}
+
+.weather-week {
+  outline: auto blue;
+}
