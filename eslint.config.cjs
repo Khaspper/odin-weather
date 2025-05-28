@@ -1,9 +1,8 @@
-import js from "@eslint/js";
-import globals from "globals";
-import { defineConfig } from "eslint/config";
-import prettier from "eslint-config-prettier";
+const js = require("@eslint/js");
+const globals = require("globals");
+const { defineConfig } = require("eslint");
 
-export default defineConfig([
+module.exports = defineConfig([
   {
     ignores: ["webpack.*.js"], // ⬅️ ignore webpack config files
   },

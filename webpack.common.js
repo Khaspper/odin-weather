@@ -1,5 +1,5 @@
 const path = require("path");
-import webpack from "webpack";
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const supportedLocales = ["en-US", "de", "pl", "it"];
