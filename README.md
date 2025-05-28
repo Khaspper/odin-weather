@@ -27,7 +27,7 @@ And if you’re thinking:
 
 > "But Markus it's literally been only one project and this project was a lot easier than the Todo project"
 
-**Yeah shut up -\_-** Let me have this W. I earned it. 😤
+**Yeah shut up -\_-** Let me have this W
 
 ## Reflection:
 
