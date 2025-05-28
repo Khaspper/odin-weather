@@ -27,7 +27,6 @@ function addDaysToWeekWeather(days) {
   for (let i = 0; i < 7; i++) {
     weeklyWeather.push(makeDayObj(days[i]));
   }
-  // console.log(weeklyWeather[0]);
 }
 
 function makeDayObj(day) {
